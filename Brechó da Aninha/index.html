@@ -1,53 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brechó da Aninha da Dança</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+    <!-- Adicionando ícones externos para um visual profissional -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO / NAVBAR ESTILO GRIFE -->
     <header>
-      <h1>Brechó da Aninha da Dança</h1>
-      <p>Roupas com história, movimento e estilo</p>
+        <div class="logo">Brechó da Aninha</div>
+        <nav>
+            <a href="#news">News</a>
+            <a href="#marcas">Marcas</a>
+            <a href="#vitrine">Vitrine</a>
+            <a href="#" class="btn-topo">Quero Vender</a>
+        </nav>
     </header>
-    <main class="vitrine">
-      <div class="produto-card">
-        <div class="produto-imagem"> 
-       <img src="photos/ballet.jpeg" alt="Collant Rosa Clássico com alça fina.">
+
+    <!-- BANNER ROTATIVO / CARROSSEL ANIMADO EXCLUSIVO EM CSS -->
+    <section class="carrossel-container">
+        <div class="carrossel-slides">
+            <!-- Slide 1: Oportunidade Inverno -->
+            <div class="slide">
+                <div class="slide-conteudo promocional">
+                    <span class="tag">OPORTUNIDADE</span>
+                    <h1>inverno <strong>50% off</strong></h1>
+                    <p>Aproveite nossa seleção especial com descontos imperdíveis para aquecer o seu estilo.</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Identidade Visual da Marca -->
+            <div class="slide">
+                <div class="slide-conteudo marca-fundo">
+                    <span class="tag-new">NEW IN</span>
+                    <h2>CLOSET <strong>ANINHA RODRIGUES</strong></h2>
+                    <p>Roupas com história, movimento e estilo selecionadas especialmente para você.</p>
+                </div>
+            </div>
         </div>
-        <div class="produto-info">
-          <h3 class="produto-titulo">Collant Rosa Clássicos</h3>
-          <p class="produto-preco">R$ 45,00</p>
-          <a href="https://wa.me/5543991744077?text=Olá!%20Tenho%20interesse%20n%20Collant%20rosa" target="_blank" class="btn-comprar">Comprar Agora</a>
-          
+        
+        <!-- Indicadores de página abaixo do banner -->
+        <div class="carrossel-indicadores">
+            <span class="ind ativo"></span>
+            <span class="ind"></span>
         </div>
-      </div>
-      <div class="produto-card">
-        <div class="produto-imagem">
-       <img src="photos/saia.jpeg"  alt="Saia Transpassada de Ballet">
+    </section>
+
+    <!-- BARRA DE PESQUISA INTEGRADA -->
+    <div class="busca-container">
+        <div class="busca-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="O que você está procurando?">
         </div>
-        <div class="produto-info">
-          <h3 class="produto-titulo">Saia Transpassada de Ballet</h3>
-          <p class="produto-preco">R$ 30,00</p>
-          <a href="https://wa.me/5543991744017?text=Olá!%20Tenho%20interesse%20na%20Saia" target="_blank" class="btn-comprar">Comprar Agora</a>
+    </div>
+
+    <!-- VITRINE DE PRODUTOS -->
+    <main id="vitrine" class="vitrine">
+        <!-- Produto 1 -->
+        <div class="produto-card">
+            <div class="produto-imagem">
+                <img src="photos/ballet.jpeg" alt="Collant Rosa Clássico">
+            </div>
+            <div class="produto-info">
+                <h3 class="produto-titulo">Collant Rosa Clássicos</h3>
+                <p class="produto-preco">R$ 45,00</p>
+                <a href="https://wa.me/5543991744017?text=Olá!%20Tenho%20interesse%20no%20Collant%20rosa" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="produto-card">
-        <div class="produto-imagem">
-       <img src="photos/pernas.jpeg" alt="Aquecedor de Perna de Tricô">
+
+        <!-- Produto 2 -->
+        <div class="produto-card">
+            <div class="produto-imagem">
+                <img src="photos/saia.jpeg" alt="Saia Transpassada de Ballet">
+            </div>
+            <div class="produto-info">
+                <h3 class="produto-titulo">Saia Transpassada de Ballet</h3>
+                <p class="produto-preco">R$ 30,00</p>
+                <a href="https://wa.me/5543991744017?text=Olá!%20Tenho%20interesse%20na%20saia" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+                </a>
+            </div>
         </div>
-        <div class="produto-info">
-          <h3 class="produto-titulo">Aquecedor de Perna de Tricô</h3>
-          <p class="produto-preco">R$ 25,00</p>
-          <a href="https://wa.me/5543991744017?text=Olá!%20Tenho%20interesse%20no%20Aquecedor%20de%20Perna" target="_blank" class="btn-comprar">Comprar Agora</a>
+
+        <!-- Produto 3 -->
+        <div class="produto-card">
+            <div class="produto-imagem">
+                <img src="photos/pernas.jpeg" alt="Aquecedor de Perna de Tricô">
+            </div>
+            <div class="produto-info">
+                <h3 class="produto-titulo">Aquecedor de Perna de Tricô</h3>
+                <p class="produto-preco">R$ 25,00</p>
+                <a href="https://wa.me/5543991744017?text=Olá!%20Tenho%20interesse%20no%20Aquecedor%20de%20Perna" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+                </a>
+            </div>
         </div>
-      </div>
     </main>
-  </body>
+
+</body>
 </html>
- 
- 
- 
- 
- 
+
