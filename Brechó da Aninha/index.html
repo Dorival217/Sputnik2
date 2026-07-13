@@ -53,6 +53,7 @@
         </form>
     </div>
 
+<<<<<<< HEAD
     <!-- VITRINE DE PRODUTOS / GRADE DE ITENS -->
     <section class="vitrine-container">
         <h2 id="vitrine-titulo">Vitrine em Destaque</h2>
@@ -68,10 +69,26 @@
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+=======
+    <!-- VITRINE DE PRODUTOS -->
+    <main id="vitrine" class="vitrine">
+        <!-- Produto 1 -->
+        <div class="produto-card">
+            <div class="produto-imagem">
+                <img src="photos/ballet.jpeg" alt="Collant Rosa Clássico">
+            </div>
+            <div class="produto-info">
+                <h3 class="produto-titulo">Collant Rosa Clássicos</h3>
+                <p class="produto-preco">R$ 45,00</p>
+                <a href="https://wa.me/554399174017text=Olá!%20Tenho%20interesse%20no%20Collant%20rosa" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+                </a>
+>>>>>>> 75e7902d8df9e8b2f20b1c36cbf14d31a5cc7137
             </div>
         </div>
     </footer>
 
+<<<<<<< HEAD
     <!-- INTERATIVIDADE COM JAVASCRIPT -->
     <script>
         async function renderizarVitrine() {
@@ -80,6 +97,36 @@
             try {
                 const resposta = await fetch('products.json');
                 const produtos = await resposta.json();
+=======
+        <!-- Produto 2 -->
+        <div class="produto-card">
+            <div class="produto-imagem">
+                <img src="photos/saia.jpeg" alt="Saia Transpassada de Ballet">
+            </div>
+            <div class="produto-info">
+                <h3 class="produto-titulo">Saia Transpassada de Ballet</h3>
+                <p class="produto-preco">R$ 30,00</p>
+                <a href="https://wa.me/554399174017text=Olá!%20Tenho%20interesse%20na%20saia" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto-card">
+            <div class="produto-imagem">
+                <img src="photos/pernas.jpeg" alt="Aquecedor de Perna de Tricô">
+            </div>
+            <div class="produto-info">
+                <h3 class="produto-titulo">Aquecedor de Perna de Tricô</h3>
+                <p class="produto-preco">R$ 25,00</p>
+                <a href="https://wa.me/554399174017text=Olá!%20Tenho%20interesse%20no%20Aquecedor%20de%20Perna" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+>>>>>>> 75e7902d8df9e8b2f20b1c36cbf14d31a5cc7137
 
                 vitrine.innerHTML = '';
 
