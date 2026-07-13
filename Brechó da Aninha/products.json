@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Collant Rosa Clássico",
+    "marca": "Capezio",
+    "preco": "R$ 45,00",
+    "tamanho": "M",
+    "condicao": "Usado",
+    "imagem": "photos/ballet.jpeg",
+    "linkWhatsapp": "https://wa.me"
+  },
+  {
+    "titulo": "Saia Transpassada de Ballet",
+    "marca": "Só Dança",
+    "preco": "R$ 30,00",
+    "tamanho": "P",
+    "condicao": "Novo",
+    "imagem": "photos/saia.jpeg",
+    "linkWhatsapp": "https://wa.me"
+  }
+]

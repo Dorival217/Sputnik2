@@ -3,47 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brechó da Aninha da Dança</title>
+    <title>Brechó da Aninha</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Adicionando ícones externos para um visual profissional -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-
-    <!-- CABEÇALHO / NAVBAR ESTILO GRIFE -->
+<body id="top">
     <header>
         <div class="logo">Brechó da Aninha</div>
         <nav>
-            <a href="#news">News</a>
-            <a href="#marcas">Marcas</a>
-            <a href="#vitrine">Vitrine</a>
-            <a href="#" class="btn-topo">Quero Vender</a>
+            <a href="#vitrine">Produtos</a>
+            <a href="#contato">Contato</a>
+            <a href="#top" class="btn-topo">Topo</a>
         </nav>
     </header>
 
-    <!-- BANNER ROTATIVO / CARROSSEL ANIMADO EXCLUSIVO EM CSS -->
     <section class="carrossel-container">
         <div class="carrossel-slides">
-            <!-- Slide 1: Oportunidade Inverno -->
-            <div class="slide">
-                <div class="slide-conteudo promocional">
-                    <span class="tag">OPORTUNIDADE</span>
-                    <h1>inverno <strong>50% off</strong></h1>
-                    <p>Aproveite nossa seleção especial com descontos imperdíveis para aquecer o seu estilo.</p>
+            <div class="slide promocional">
+                <div class="slide-conteudo">
+                    <span class="tag">Ofertas</span>
+                    <h1>Achados em Ballet</h1>
+                    <p>Descubra peças cuidadosamente selecionadas para dança e estilo com preço acessível.</p>
                 </div>
             </div>
-            
-            <!-- Slide 2: Identidade Visual da Marca -->
-            <div class="slide">
-                <div class="slide-conteudo marca-fundo">
-                    <span class="tag-new">NEW IN</span>
-                    <h2>CLOSET <strong>ANINHA RODRIGUES</strong></h2>
-                    <p>Roupas com história, movimento e estilo selecionadas especialmente para você.</p>
+            <div class="slide marca-fundo">
+                <div class="slide-conteudo">
+                    <span class="tag-new">Novo</span>
+                    <h2>Brechó da Aninha</h2>
+                    <p>Renove seu guarda-roupa com peças elegantes, confortáveis e cheias de personalidade.</p>
                 </div>
             </div>
         </div>
-        
-        <!-- Indicadores de página abaixo do banner -->
         <div class="carrossel-indicadores">
             <span class="ind ativo"></span>
             <span class="ind"></span>
@@ -52,57 +45,107 @@
 
     <!-- BARRA DE PESQUISA INTEGRADA -->
     <div class="busca-container">
-        <div class="busca-wrapper">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="O que você está procurando?">
-        </div>
+        <form action="#" method="GET" class="formulario-busca">
+            <input type="text" placeholder="O que você está procurando?" aria-label="Buscar produtos" class="campo-busca">
+            <button type="submit" class="botao-busca" aria-label="Pesquisar">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
     </div>
 
-    <!-- VITRINE DE PRODUTOS -->
-    <main id="vitrine" class="vitrine">
-        <!-- Produto 1 -->
-        <div class="produto-card">
-            <div class="produto-imagem">
-                <img src="photos/ballet.jpeg" alt="Collant Rosa Clássico">
-            </div>
-            <div class="produto-info">
-                <h3 class="produto-titulo">Collant Rosa Clássicos</h3>
-                <p class="produto-preco">R$ 45,00</p>
-                <a href="https://wa.me/554399174017?text=Olá!%20Tenho%20interesse%20no%20Collant%20rosa" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
+    <!-- VITRINE DE PRODUTOS / GRADE DE ITENS -->
+    <section class="vitrine-container">
+        <h2 id="vitrine-titulo">Vitrine em Destaque</h2>
+        <div id="vitrine" class="grade-produtos">
+            <!-- Os produtos do seu arquivo JSON serão inseridos aqui -->
+        </div>
+    </section>
+
+    <!-- RODAPÉ DA LOJA -->
+    <footer id="contato">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 Brechó da Aninha da Dança. Todos os direitos reservados.</p>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
+    </footer>
 
-        <!-- Produto 2 -->
-        <div class="produto-card">
-            <div class="produto-imagem">
-                <img src="photos/saia.jpeg" alt="Saia Transpassada de Ballet">
-            </div>
-            <div class="produto-info">
-                <h3 class="produto-titulo">Saia Transpassada de Ballet</h3>
-                <p class="produto-preco">R$ 30,00</p>
-                <a href="https://wa.me/554399174017?text=Olá!%20Tenho%20interesse%20na%20saia" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-        </div>
+    <!-- INTERATIVIDADE COM JAVASCRIPT -->
+    <script>
+        async function renderizarVitrine() {
+            const vitrine = document.getElementById('vitrine');
 
-        <!-- Produto 3 -->
-        <div class="produto-card">
-            <div class="produto-imagem">
-                <img src="photos/pernas.jpeg" alt="Aquecedor de Perna de Tricô">
-            </div>
-            <div class="produto-info">
-                <h3 class="produto-titulo">Aquecedor de Perna de Tricô</h3>
-                <p class="produto-preco">R$ 25,00</p>
-                <a href="https://wa.me/554399174017?text=Olá!%20Tenho%20interesse%20no%20Aquecedor%20de%20Perna" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-        </div>
-    </main>
+            try {
+                const resposta = await fetch('products.json');
+                const produtos = await resposta.json();
 
+                vitrine.innerHTML = '';
+
+                produtos.forEach(produto => {
+                    const card = document.createElement('div');
+                    card.className = 'card-produto';
+
+                    card.innerHTML = `
+                        <div class="imagem-produto">
+                            <img src="${produto.imagem}" alt="${produto.titulo}" loading="lazy">
+                        </div>
+                        <div class="info-produto">
+                            <h3>${produto.titulo}</h3>
+                            <p class="preco">${produto.preco}</p>
+                            <a href="${produto.linkWhatsapp}" target="_blank" rel="noopener noreferrer" class="btn-comprar">
+                                <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
+                            </a>
+                        </div>
+                    `;
+
+                    vitrine.appendChild(card);
+                });
+            } catch (erro) {
+                console.error('Erro ao carregar a vitrine:', erro);
+                vitrine.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Erro ao carregar produtos. Tente novamente mais tarde.</p>';
+            }
+        }
+
+        function configurarFiltroBusca() {
+            const campoBusca = document.querySelector('.campo-busca');
+            const formBusca = document.querySelector('.formulario-busca');
+            const vitrineTitulo = document.getElementById('vitrine-titulo');
+
+            function filtrarProdutos() {
+                const termo = campoBusca.value.toLowerCase().trim();
+                const produtos = document.querySelectorAll('.card-produto');
+                let encontrados = 0;
+
+                produtos.forEach(produto => {
+                    const titulo = produto.querySelector('h3').textContent.toLowerCase();
+
+                    if (titulo.includes(termo)) {
+                        produto.style.display = 'block';
+                        encontrados++;
+                    } else {
+                        produto.style.display = 'none';
+                    }
+                });
+
+                vitrineTitulo.textContent = encontrados === 0 && termo !== '' ? 'Nenhum item encontrado' : 'Vitrine em Destaque';
+            }
+
+            campoBusca.addEventListener('input', filtrarProdutos);
+            formBusca.addEventListener('submit', (e) => {
+                e.preventDefault();
+                filtrarProdutos();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await renderizarVitrine();
+            configurarFiltroBusca();
+        });
+    </script>
 </body>
 </html>
 
+
+   

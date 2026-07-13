@@ -1,4 +1,6 @@
-/* CONFIGURAÇÃO GLOBAL DO DESIGN */
+/* ==========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,113 +9,121 @@
 }
 
 body {
-    background-color: #fcfcfc;
+    background-color: #fcfbf9; /* Off-white elegante */
     color: #222;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-/* NAVBAR ESTILO PREMIUM */
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* ==========================================
+   CABEÇALHO / NAVBAR (ESTILO GRIFE)
+   ========================================== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 header .logo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-header nav a {
-    text-decoration: none;
+nav a {
     color: #555;
-    margin-left: 25px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 25px;
     transition: color 0.3s;
 }
 
-header nav a:hover {
+nav a:hover {
     color: #000;
 }
 
-header nav .btn-topo {
-    border: 1px solid #000;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-header nav .btn-topo:hover {
+.btn-topo {
     background-color: #000;
-    color: #fff;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
-/* CARROSSEL DE SLIDES (MECANISMO DA ANIMAÇÃO AUTOMÁTICA) */
+.btn-topo:hover {
+    background-color: #333;
+}
+
+/* ==========================================
+   CARROSSEL ANIMADO EXCLUSIVO EM CSS
+   ========================================== */
 .carrossel-container {
     width: 100%;
-    height: 480px;
+    height: 450px;
     overflow: hidden;
     position: relative;
-    background-color: #000;
+    background-color: #f5f5f5;
 }
 
 .carrossel-slides {
     display: flex;
-    width: 200%; /* Espaço total para 2 slides lado a lado (100% cada) */
+    width: 200%; /* Dois slides */
     height: 100%;
-    animation: deslizarBanner 10s infinite ease-in-out;
+    animation: deslizar 12s infinite ease-in-out;
 }
 
 .slide {
-    width: 50%; /* Metade do container pai de 200% significa 100% da tela */
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
+    text-align: center;
+    padding: 0 10%;
+    min-width: 50%;
 }
 
-/* CONFIGURAÇÃO VISUAL DE CADA BANNER INTERNO */
+/* Slide 1 - Tons de Inverno */
 .promocional {
-    background-color: #612229; /* Vinho elegante do banner da imagem */
-    color: #ffffff;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://unsplash.com') center/cover;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
+/* Slide 2 - Conceitual */
 .marca-fundo {
-    background-color: #222; /* Fundo alternativo escuro elegante */
-    color: #ffffff;
+    background: linear-gradient(rgba(240,235,230,0.85), rgba(240,235,230,0.85)), url('https://unsplash.com') center/cover;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-/* ESTILIZAÇÃO DO TEXTO DO BANNER REPASSA */
 .slide-conteudo h1, .slide-conteudo h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
-    text-transform: uppercase;
     letter-spacing: 4px;
+    text-transform: uppercase;
     margin: 15px 0;
 }
 
@@ -123,129 +133,261 @@ header nav .btn-topo:hover {
 }
 
 .slide-conteudo p {
-    font-size: 1.1rem;
-    max-width: 500px;
-    opacity: 0.8;
-}
-
-.tag {
-    border: 1px solid #fff;
-    padding: 4px 12px;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-}
-
-/* LÓGICA DA ANIMAÇÃO DO CARROSSEL DE SLIDES */
-@keyframes deslizarBanner {
-    0%, 45% { transform: translateX(0); }       /* Exibe o primeiro slide */
-    50%, 95% { transform: translateX(-50%); }   /* Desloca para o segundo slide */
-    100% { transform: translateX(0); }          /* Reinicia o ciclo suavemente */
-}
-
-/* BARRA DE BUSCA */
-.busca-container {
-    padding: 30px 5%;
-    display: flex;
-    justify-content: center;
-}
-
-.busca-wrapper {
-    position: relative;
-    width: 100%;
+    font-size: 1rem;
+    color: #666;
     max-width: 600px;
 }
 
-.busca-wrapper i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
+.tag, .tag-new {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
 }
 
-.busca-wrapper input {
-    width: 100%;
-    padding: 12px 12px 12px 45px;
-    border: 1px solid #ddd;
+.tag { background-color: #b85a3a; }
+.tag-new { background-color: #2c3e50; }
+
+/* Animação de transição automática do banner */
+@keyframes deslizar {
+    0%, 45% { transform: translateX(0); }
+    50%, 95% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Indicadores estáticos simulados abaixo do banner */
+.carrossel-indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.ind {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.ind.ativo {
+    background-color: #000;
+    width: 20px;
     border-radius: 4px;
+}
+
+/* ==========================================
+   BARRA DE PESQUISA INTEGRADA
+   ========================================== */
+.busca-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.formulario-busca {
+    display: flex;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+.campo-busca {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 10px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s;
 }
 
-.busca-wrapper input:focus {
-    border-color: #000;
+.botao-busca {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    color: #333;
 }
 
-/* GRADE DA VITRINE MODERNA */
-.vitrine {
+/* ==========================================
+   VITRINE DE PRODUTOS / GRADE DE ITENS
+   ========================================== */
+.vitrine-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.vitrine-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.grade-produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    padding: 0 5% 50px 5%;
 }
 
-.produto-card {
-    background: #fff;
-    border-radius: 8px;
+.card-produto {
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.imagem-produto {
+    position: relative;
+    height: 380px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
+    background-color: #f9f9f9;
 }
 
-.produto-card:hover {
-    transform: translateY(-50px);
-}
-
-.produto-imagem {
-    width: 100%;
-    height: 350px;
-    background-color: #f0f0f0;
-}
-
-.produto-imagem img {
+.imagem-produto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s;
 }
 
-.produto-info {
+.card-produto:hover .imagem-produto img {
+    transform: scale(1.05);
+}
+
+.tag-produto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #7f8c8d;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+.tag-novo {
+    background-color: #27ae60;
+}
+
+.info-produto {
     padding: 20px;
     text-align: center;
 }
 
-.produto-titulo {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 8px;
+.info-produto h3 {
+    font-size: 1rem;
+    font-weight: 500;
     color: #333;
+    margin-bottom: 5px;
 }
 
-.produto-preco {
-    font-size: 1.2rem;
+.info-produto .marca {
+    font-size: 0.8rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.info-produto .preco {
+    font-size: 1.1rem;
     font-weight: 700;
     color: #000;
     margin-bottom: 15px;
 }
 
-/* BOTÃO CUSTOMIZADO WHATSAPP ESTILO LOJA */
-.btn-whatsapp {
-    display: inline-block;
+.btn-comprar {
     width: 100%;
-    padding: 10px 0;
-    background-color: #25d366;
+    background-color: #000;
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s;
+    border: none;
+    padding: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.btn-whatsapp:hover {
-    background-color: #1ebd54;
+.btn-comprar:hover {
+    background-color: #333;
 }
 
+/* ==========================================
+   RODAPÉ DA LOJA
+   ========================================== */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 80px;
+}
 
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+footer p {
+    font-size: 0.85rem;
+    color: #aaa;
+}
 
+.redes-sociais a {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
 
+.redes-sociais a:hover {
+    color: #d4af37; /* Toque dourado elegante ao passar o mouse */
+}
+
+/* ==========================================
+   RESPONSIVIDADE (TELAS MENORES)
+   ========================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .carrossel-container {
+        height: 350px;
+    }
+    .slide-conteudo h1, .slide-conteudo h2 {
+        font-size: 1.8rem;
+    }
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    .redes-sociais a {
+        margin: 0 10px;
+    }
+}
