@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="100%" height="100%" fill="#fff7f5"/>
+  <g transform="translate(80,40)" fill="#b85a3a">
+    <path d="M120 180 q60 -120 180 -40 q60 40 160 0 q20 -8 40 20 q10 16 0 34 q-38 66 -160 66 q-120 0 -240 -80 q-20 -14 0 -36 q18 -20 40 -24 z" opacity="0.95"/>
+    <path d="M500 200 q30 -10 60 0" stroke="#111" stroke-width="6" fill="none"/>
+    <line x1="200" y1="260" x2="420" y2="320" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <text x="50%" y="370" font-family="Helvetica, Arial" font-size="20" fill="#6d695f" text-anchor="middle">Sapatilhas</text>
+</svg>

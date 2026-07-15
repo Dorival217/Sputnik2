@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Brechó da Aninha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="top">
+    <header>
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Brechó da Aninha</a>
+            <nav aria-label="Navegação principal">
+                <ul class="navbar-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="produtos-hero">
+            <div class="container produtos-hero-content">
+                <span class="eyebrow">Vitrine</span>
+                <h1>Peças com estilo, valor e identidade</h1>
+                <p>Seleção de roupas e acessórios prontos para entrada imediata em looks autorais e dançantes.</p>
+                <div class="hero-actions">
+                    <a href="#vitrine" class="btn btn-primary">Ver vitrine</a>
+                    <a href="contato.html" class="btn btn-secondary">Fale conosco</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div id="root"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-brand">Brechó da Aninha</p>
+                <p>Para mais detalhes sobre peças e pedidos, fale conosco pelo WhatsApp.</p>
+            </div>
+            <div class="footer-links">
+                <p class="footer-links-title">Atendimento</p>
+                <p><a href="https://wa.me/5543991744077" target="_blank" rel="noopener noreferrer">WhatsApp: 43 991744077</a></p>
+                <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">@brechodaaninha</a></p>
+            </div>
+            <div class="footer-about">
+                <p class="footer-about-title">Sobre</p>
+                <p>Curadoria de peças únicas para dança e estilo autoral.</p>
+            </div>
+            <div class="footer-note">
+                <p>Entrega rápida e atendimento personalizado.</p>
+                <p>Compras seguras com suporte completo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const produtosPadrao = [
+            {
+                titulo: "Collant Rosa Clássico Capezio Vintage",
+                marca: "Capezio",
+                preco: "R$ 45,00",
+                tamanho: "M (veste 38/40)",
+                condicao: "8/10",
+                imagem: "photos/ballet.jpeg",
+                linkWhatsapp: "https://wa.me/5543991744077?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20o%20Collant%20Rosa%20Cl%C3%A1ssico%20Capezio%20Vintage"
+            },
+            {
+                titulo: "Saia Transpassada de Ballet Só Dança Retro",
+                marca: "Só Dança",
+                preco: "R$ 30,00",
+                tamanho: "P (veste 36)",
+                condicao: "9/10",
+                imagem: "photos/saia.jpeg",
+                linkWhatsapp: "https://wa.me/5543991744077?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20a%20Saia%20Transpassada%20de%20Ballet%20S%C3%B3%20Dan%C3%A7a%20Retro"
+            },
+            {
+                titulo: "Vestido Midi Floral Lança Perfume Boho",
+                marca: "Lança Perfume",
+                preco: "R$ 70,00",
+                tamanho: "G (veste 42)",
+                condicao: "8/10",
+                imagem: "photos/pernas.jpeg",
+                linkWhatsapp: "https://wa.me/5543991744077?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20o%20Vestido%20Midi%20Floral%20Lan%C3%A7a%20Perfume%20Boho"
+            }
+        ];
+
+        function ProductCard({ produto }) {
+            return (
+                <div className="card-produto">
+                    <div className="imagem-produto">
+                        <img src={produto.imagem} alt={produto.titulo} loading="lazy" />
+                    </div>
+                    <div className="info-produto">
+                        <h3>{produto.titulo}</h3>
+                        <p className="descricao">🔹 {produto.titulo} {produto.marca}</p>
+                        <p className="detalhe">🔹 Condição: {produto.condicao}</p>
+                        <p className="detalhe">🔹 Tamanho: {produto.tamanho}</p>
+                        <p className="preco">{produto.preco}</p>
+                        <a href={produto.linkWhatsapp} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-comprar">
+                            <i className="fab fa-whatsapp"></i> Comprar via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            );
+        }
+
+        function App() {
+            const [produtos, setProdutos] = useState([]);
+            const [busca, setBusca] = useState('');
+            const [carregando, setCarregando] = useState(true);
+            const [erro, setErro] = useState(null);
+
+            useEffect(() => {
+                async function carregarProdutos() {
+                    try {
+                        const resposta = await fetch('products.json');
+                        if (!resposta.ok) {
+                            throw new Error('Não foi possível carregar os produtos.');
+                        }
+                        const dados = await resposta.json();
+                        setProdutos(dados);
+                    } catch (err) {
+                        setErro('Não foi possível carregar os produtos. Usando catálogo padrão.');
+                        setProdutos(produtosPadrao);
+                    } finally {
+                        setCarregando(false);
+                    }
+                }
+                carregarProdutos();
+            }, []);
+
+            const produtosFiltrados = produtos.filter((produto) =>
+                produto.titulo.toLowerCase().includes(busca.toLowerCase())
+            );
+
+            return (
+                <section className="vitrine-container fade-in" id="vitrine">
+                    <div className="busca-container">
+                        <form className="formulario-busca" onSubmit={(e) => e.preventDefault()}>
+                            <input
+                                type="text"
+                                placeholder="Buscar produtos"
+                                aria-label="Buscar produtos"
+                                className="campo-busca"
+                                value={busca}
+                                onChange={(e) => setBusca(e.target.value)}
+                            />
+                            <button type="submit" className="botao-busca" aria-label="Pesquisar">
+                                <i className="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <h2 id="vitrine-titulo">Vitrine em Destaque</h2>
+
+                    {carregando && <p className="status-text">Carregando produtos...</p>}
+                    {erro && <p className="status-text status-error">{erro}</p>}
+                    {!carregando && !erro && produtosFiltrados.length === 0 && (
+                        <p className="status-text">Nenhum item encontrado</p>
+                    )}
+
+                    <div className="grade-produtos">
+                        {produtosFiltrados.map((produto, index) => (
+                            <ProductCard key={index} produto={produto} />
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

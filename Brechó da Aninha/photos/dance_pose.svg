@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8e9e2" />
+      <stop offset="1" stop-color="#b85a3a" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)" />
+  <g transform="translate(200,80) scale(0.9)" fill="#111">
+    <circle cx="200" cy="60" r="28" />
+    <path d="M200 88 c-40 40 -72 120 -40 190 18 42 60 60 100 60s82-18 100-60c32-70 0-150-40-190" fill="#fff" opacity="0.06"/>
+    <path d="M200 96 c-34 34 -62 102 -36 158 16 34 52 48 84 48s68-14 84-48c26-56 -2-124-36-158" fill="#111"/>
+    <path d="M200 160 l-36 120" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    <path d="M250 160 l36 120" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    <path d="M160 120 q40 -30 80 0" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="50%" y="560" font-family="Helvetica, Arial" font-size="28" fill="#fff" text-anchor="middle">Dança & Moda</text>
+</svg>

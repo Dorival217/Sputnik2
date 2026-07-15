@@ -5,194 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brechó da Aninha</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body id="top">
+<body>
     <header>
-        <div class="logo">Brechó da Aninha</div>
-        <nav>
-            <a href="#vitrine">Produtos</a>
-            <a href="#contato">Contato</a>
-            <a href="#top" class="btn-topo">Topo</a>
-        </nav>
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Brechó da Aninha</a>
+            <nav aria-label="Navegação principal">
+                <ul class="navbar-list">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="carrossel-container">
-        <div class="carrossel-slides">
-            <div class="slide promocional">
-                <div class="slide-conteudo">
-                    <span class="tag">Ofertas</span>
-                    <h1>Achados em Ballet</h1>
-                    <p>Descubra peças cuidadosamente selecionadas para dança e estilo com preço acessível.</p>
+    <main>
+        <section class="hero-home">
+            <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="photos/ballet.jpeg">
+                <source src="photos/video1.mp4" type="video/mp4" />
+            </video>
+            <div class="container hero-home-content">
+                <span class="eyebrow">Moda autoral e dança</span>
+                <h1>Peças selecionadas para quem busca estilo e qualidade</h1>
+                <p>Roupas e acessórios curados para dança, ensaios e looks autorais com acabamento premium.</p>
+                <div class="hero-actions">
+                    <a href="produtos.html" class="btn btn-primary">Ver vitrine</a>
+                    <a href="contato.html" class="btn btn-secondary">Contato</a>
                 </div>
             </div>
-            <div class="slide marca-fundo">
-                <div class="slide-conteudo">
-                    <span class="tag-new">Novo</span>
-                    <h2>Brechó da Aninha</h2>
-                    <p>Renove seu guarda-roupa com peças elegantes, confortáveis e cheias de personalidade.</p>
+        </section>
+
+        <section class="feature-section">
+            <div class="container feature-grid">
+                <article class="feature-card">
+                    <h2>Seleção criteriosa</h2>
+                    <p>Cada peça é inspecionada para garantir bom estado, acabamento e estilo exclusivo.</p>
+                </article>
+                <article class="feature-card">
+                    <h2>Atendimento personalizado</h2>
+                    <p>Atendemos por WhatsApp com fotos, medidas e sugestões para escolha segura.</p>
+                </article>
+                <article class="feature-card">
+                    <h2>Look inspirado</h2>
+                    <p>Combine peças de dança, vintage e streetwear para criar visuais autênticos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="highlight-section">
+            <div class="container highlight-card">
+                <div>
+                    <h2>Seu brechó de confiança para peças com história</h2>
+                    <p>Traga originalidade ao seu guarda-roupa com itens bem conservados e cuidadosamente selecionados.</p>
                 </div>
+                <a href="produtos.html" class="btn btn-primary">Explorar produtos</a>
             </div>
-        </div>
-        <div class="carrossel-indicadores">
-            <span class="ind ativo"></span>
-            <span class="ind"></span>
-        </div>
-    </section>
+        </section>
 
-    <!-- BARRA DE PESQUISA INTEGRADA -->
-    <div class="busca-container">
-        <form action="#" method="GET" class="formulario-busca">
-            <input type="text" placeholder="O que você está procurando?" aria-label="Buscar produtos" class="campo-busca">
-            <button type="submit" class="botao-busca" aria-label="Pesquisar">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-    </div>
-
-<<<<<<< HEAD
-    <!-- VITRINE DE PRODUTOS / GRADE DE ITENS -->
-    <section class="vitrine-container">
-        <h2 id="vitrine-titulo">Vitrine em Destaque</h2>
-        <div id="vitrine" class="grade-produtos">
-            <!-- Os produtos do seu arquivo JSON serão inseridos aqui -->
-        </div>
-    </section>
-
-    <!-- RODAPÉ DA LOJA -->
-    <footer id="contato">
-        <div class="rodape-conteudo">
-            <p>&copy; 2026 Brechó da Aninha da Dança. Todos os direitos reservados.</p>
-            <div class="redes-sociais">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-=======
-    <!-- VITRINE DE PRODUTOS -->
-    <main id="vitrine" class="vitrine">
-        <!-- Produto 1 -->
-        <div class="produto-card">
-            <div class="produto-imagem">
-                <img src="photos/ballet.jpeg" alt="Collant Rosa Clássico">
+        <section class="testimonial-section">
+            <div class="container testimonial-grid">
+                <article class="testimonial-card">
+                    <p>“Encontrei o look perfeito para meu ensaio. Excelente atendimento e peças únicas.”</p>
+                    <span>- Ana, bailarina</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>“A seleção de roupas é incrível e a entrega foi muito rápida. Recomendo para quem quer estilo e qualidade.”</p>
+                    <span>- Júlia, cliente</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>“O brechó tem peças lindas e o atendimento via WhatsApp me ajudou a escolher exatamente o que precisava.”</p>
+                    <span>- Lu, estudante de dança</span>
+                </article>
             </div>
-            <div class="produto-info">
-                <h3 class="produto-titulo">Collant Rosa Clássicos</h3>
-                <p class="produto-preco">R$ 45,00</p>
-                <a href="https://wa.me/554399174017text=Olá!%20Tenho%20interesse%20no%20Collant%20rosa" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
->>>>>>> 75e7902d8df9e8b2f20b1c36cbf14d31a5cc7137
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-brand">Brechó da Aninha</p>
+                <p>Moda de dança e peças vintage com estilo autoral e atendimento atencioso.</p>
+            </div>
+            <div class="footer-links">
+                <p class="footer-links-title">Contato</p>
+                <p><a href="https://wa.me/5543991744077" target="_blank" rel="noopener noreferrer">WhatsApp: 43 991744077</a></p>
+                <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">@brechodaaninha</a></p>
+            </div>
+            <div class="footer-note">
+                <p>Atendimento personalizado 7 dias por semana.</p>
+                <p>Envios para todo o Brasil com garantia de qualidade.</p>
+            </div>
+            <div class="footer-about">
+                <p class="footer-about-title">Sobre</p>
+                <p>Peças selecionadas com curadoria para bailarinas e amantes de moda autoral.</p>
             </div>
         </div>
     </footer>
-
-<<<<<<< HEAD
-    <!-- INTERATIVIDADE COM JAVASCRIPT -->
     <script>
-        async function renderizarVitrine() {
-            const vitrine = document.getElementById('vitrine');
-
-            try {
-                const resposta = await fetch('products.json');
-                const produtos = await resposta.json();
-=======
-        <!-- Produto 2 -->
-        <div class="produto-card">
-            <div class="produto-imagem">
-                <img src="photos/saia.jpeg" alt="Saia Transpassada de Ballet">
-            </div>
-            <div class="produto-info">
-                <h3 class="produto-titulo">Saia Transpassada de Ballet</h3>
-                <p class="produto-preco">R$ 30,00</p>
-                <a href="https://wa.me/554399174017text=Olá!%20Tenho%20interesse%20na%20saia" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <!-- Produto 3 -->
-        <div class="produto-card">
-            <div class="produto-imagem">
-                <img src="photos/pernas.jpeg" alt="Aquecedor de Perna de Tricô">
-            </div>
-            <div class="produto-info">
-                <h3 class="produto-titulo">Aquecedor de Perna de Tricô</h3>
-                <p class="produto-preco">R$ 25,00</p>
-                <a href="https://wa.me/554399174017text=Olá!%20Tenho%20interesse%20no%20Aquecedor%20de%20Perna" target="_blank" class="btn-whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar via WhatsApp
-                </a>
-            </div>
-        </div>
-    </main>
->>>>>>> 75e7902d8df9e8b2f20b1c36cbf14d31a5cc7137
-
-                vitrine.innerHTML = '';
-
-                produtos.forEach(produto => {
-                    const card = document.createElement('div');
-                    card.className = 'card-produto';
-
-                    card.innerHTML = `
-                        <div class="imagem-produto">
-                            <img src="${produto.imagem}" alt="${produto.titulo}" loading="lazy">
-                        </div>
-                        <div class="info-produto">
-                            <h3>${produto.titulo}</h3>
-                            <p class="preco">${produto.preco}</p>
-                            <a href="${produto.linkWhatsapp}" target="_blank" rel="noopener noreferrer" class="btn-comprar">
-                                <i class="fab fa-whatsapp"></i> Comprar via WhatsApp
-                            </a>
-                        </div>
-                    `;
-
-                    vitrine.appendChild(card);
-                });
-            } catch (erro) {
-                console.error('Erro ao carregar a vitrine:', erro);
-                vitrine.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Erro ao carregar produtos. Tente novamente mais tarde.</p>';
-            }
-        }
-
-        function configurarFiltroBusca() {
-            const campoBusca = document.querySelector('.campo-busca');
-            const formBusca = document.querySelector('.formulario-busca');
-            const vitrineTitulo = document.getElementById('vitrine-titulo');
-
-            function filtrarProdutos() {
-                const termo = campoBusca.value.toLowerCase().trim();
-                const produtos = document.querySelectorAll('.card-produto');
-                let encontrados = 0;
-
-                produtos.forEach(produto => {
-                    const titulo = produto.querySelector('h3').textContent.toLowerCase();
-
-                    if (titulo.includes(termo)) {
-                        produto.style.display = 'block';
-                        encontrados++;
-                    } else {
-                        produto.style.display = 'none';
-                    }
-                });
-
-                vitrineTitulo.textContent = encontrados === 0 && termo !== '' ? 'Nenhum item encontrado' : 'Vitrine em Destaque';
-            }
-
-            campoBusca.addEventListener('input', filtrarProdutos);
-            formBusca.addEventListener('submit', (e) => {
-                e.preventDefault();
-                filtrarProdutos();
+        (function(){
+            const v = document.getElementById('heroVideo');
+            if(!v) return;
+            v.play().catch(err => {
+                console.warn('Autoplay falhou, aguardando interação do usuário para iniciar vídeo.', err);
+                document.addEventListener('click', () => v.play(), { once: true });
             });
-        }
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            await renderizarVitrine();
-            configurarFiltroBusca();
-        });
+            v.addEventListener('error', e => {
+                console.error('Erro no carregamento do vídeo:', e);
+            });
+        })();
     </script>
 </body>
 </html>
-
-
-   

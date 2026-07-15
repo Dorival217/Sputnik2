@@ -1,0 +1,14 @@
+.hero-home::after,
+.produtos-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(17,17,17,0.2);
+    z-index: 1;
+}
+
+.hero-home-content,
+.produtos-hero-content {
+    position: relative;
+    z-index: 2;
+}

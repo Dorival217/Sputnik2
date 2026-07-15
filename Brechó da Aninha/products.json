@@ -1,20 +1,29 @@
 [
   {
-    "titulo": "Collant Rosa Clássico",
+    "titulo": "Collant Rosa Clássico Capezio Vintage",
     "marca": "Capezio",
     "preco": "R$ 45,00",
-    "tamanho": "M",
-    "condicao": "Usado",
+    "tamanho": "M (veste 38/40)",
+    "condicao": "8/10",
     "imagem": "photos/ballet.jpeg",
-    "linkWhatsapp": "https://wa.me"
+    "linkWhatsapp": "https://wa.me/5543991744077?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20o%20Collant%20Rosa%20Cl%C3%A1ssico%20Capezio%20Vintage"
   },
   {
-    "titulo": "Saia Transpassada de Ballet",
+    "titulo": "Saia Transpassada de Ballet Só Dança Retro",
     "marca": "Só Dança",
     "preco": "R$ 30,00",
-    "tamanho": "P",
-    "condicao": "Novo",
+    "tamanho": "P (veste 36)",
+    "condicao": "9/10",
     "imagem": "photos/saia.jpeg",
-    "linkWhatsapp": "https://wa.me"
+    "linkWhatsapp": "https://wa.me/5543991744077?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20a%20Saia%20Transpassada%20de%20Ballet%20S%C3%B3%20Dan%C3%A7a%20Retro"
+  },
+  {
+    "titulo": "Vestido Midi Floral Lança Perfume Boho",
+    "marca": "Lança Perfume",
+    "preco": "R$ 70,00",
+    "tamanho": "G (veste 42)",
+    "condicao": "8/10",
+    "imagem": "photos/pernas.jpeg",
+    "linkWhatsapp": "https://wa.me/5543991744077?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20o%20Vestido%20Midi%20Floral%20Lan%C3%A7a%20Perfume%20Boho"
   }
 ]
